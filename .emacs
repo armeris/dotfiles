@@ -77,28 +77,7 @@
 (global-set-key (kbd "<f7>") 'recentf-open-files)
 
 (require 'org-table)
-(defvar sqlplus-x-columns '(sqlplus-x-service sqlplus-x-user sqlplus-x-pwd))
-(defun sqlplus-x-connect ()
-  "Build a connection string and make a connection. The point must be in an org-mode table.
-Columns of the table must correspond to the `sqlplus-x-columns' variable."
-  (interactive)
-  (org-table-force-dataline)
-  (let
-      ((cur-row (nth (org-table-current-dline) (org-table-to-lisp)))
-       (is-user-selected (= (org-table-current-column) (+ 1 (position 'sqlplus-x-user sqlplus-x-columns)))))
-    (sqlplus
-     (format
-      "%s/%s@%s"
-      (if is-user-selected
-          (thing-at-point 'symbol)
-        (nth (position 'sqlplus-x-user sqlplus-x-columns) cur-row))
-      (nth (position 'sqlplus-x-pwd sqlplus-x-columns) cur-row)
-      (nth (position 'sqlplus-x-service sqlplus-x-columns) cur-row))
-     (concat (nth (position 'sqlplus-x-service sqlplus-x-columns) cur-row) ".sqp")
-     )
-    ))
-
-(defun myConnect()
+(defun sqlplus-my-connect()
   (interactive)
   (org-table-force-dataline)
   (setq cur-line (nth (+ (org-table-current-dline) 1) (org-table-to-lisp)))
@@ -108,4 +87,4 @@ Columns of the table must correspond to the `sqlplus-x-columns' variable."
   (setq connection-string (format "%s/%s@%s" usr pwd svc))
   (sqlplus connection-string "SQL input")
   )
-(global-set-key [f4] 'myConnect)
+(global-set-key [f4] 'sqlplus-my-connect)

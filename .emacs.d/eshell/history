@@ -1,0 +1,3 @@
+ls
+hgc -m "Updated"
+exit

@@ -1,3 +1,4 @@
+
 # i3blocks config file
 #
 # Please see man i3blocks for a complete reference!
@@ -86,7 +87,7 @@ separator=false
 
 [bandwidth]
 label=
-command=~/.i3blocks/bandwidth2 -w 307200:307200 -c 512000:51200
+command=~/.i3blocks/bandwidth2 -w 5120000:5120000 -c 10240000:10240000
 interval=persist
 markup=pango
 #instance=eth0
@@ -117,15 +118,20 @@ interval=10
 # Battery indicator
 #
 # The battery instance defaults to 0.
-[battery2]
-command=~/.i3blocks/battery2
+[battery]
+command=~/.i3blocks/battery2 0
+markup=pango
+interval=30
+
+[battery]
+command=~/.i3blocks/battery2 1
 markup=pango
 interval=30
 
 [calendar]
 command=~/.i3blocks/calendar
 label=
-interval=1
+interval=5
 
 # Date Time
 #[time]

@@ -6,8 +6,9 @@
                          (or (file-name-directory #$) (car load-path))))
 
 
-;;;### (autoloads nil "iedit" "iedit.el" (0 0 0 0))
-;;; Generated autoloads from iedit.el
+;;;### (autoloads nil "iedit" "../../../../../.emacs.d/elpa/iedit-20181114.950/iedit.el"
+;;;;;;  "3a0138efb63af03b31e80fb53d5f2391")
+;;; Generated autoloads from ../../../../../.emacs.d/elpa/iedit-20181114.950/iedit.el
 
 (autoload 'iedit-mode "iedit" "\
 Toggle Iedit mode.
@@ -71,20 +72,28 @@ Keymap used within overlays:
 Toggle Iedit mode on current function.
 
 \(fn)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "iedit" "../../../../../.emacs.d/elpa/iedit-20181114.950/iedit.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../.emacs.d/elpa/iedit-20181114.950/iedit.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "iedit" '("iedit-")))
 
 ;;;***
+
+;;;***
 
-;;;### (autoloads nil "iedit-lib" "iedit-lib.el" (0 0 0 0))
-;;; Generated autoloads from iedit-lib.el
+;;;### (autoloads "actual autoloads are elsewhere" "iedit-lib" "../../../../../.emacs.d/elpa/iedit-20181114.950/iedit-lib.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../.emacs.d/elpa/iedit-20181114.950/iedit-lib.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "iedit-lib" '("iedit-")))
 
 ;;;***
 
-;;;### (autoloads nil "iedit-rect" "iedit-rect.el" (0 0 0 0))
-;;; Generated autoloads from iedit-rect.el
+;;;### (autoloads nil "iedit-rect" "../../../../../.emacs.d/elpa/iedit-20181114.950/iedit-rect.el"
+;;;;;;  "4522a92d21bb7b6f0c36d71a01e0081d")
+;;; Generated autoloads from ../../../../../.emacs.d/elpa/iedit-20181114.950/iedit-rect.el
 
 (autoload 'iedit-rectangle-mode "iedit-rect" "\
 Toggle Iedit-rect mode.
@@ -97,12 +106,23 @@ Commands:
 \\{iedit-rect-keymap}
 
 \(fn &optional BEG END)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "iedit-rect" "../../../../../.emacs.d/elpa/iedit-20181114.950/iedit-rect.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../.emacs.d/elpa/iedit-20181114.950/iedit-rect.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "iedit-rect" '("iedit-rect")))
 
 ;;;***
+
+;;;***
 
-;;;### (autoloads nil nil ("iedit-pkg.el") (0 0 0 0))
+;;;### (autoloads nil nil ("../../../../../.emacs.d/elpa/iedit-20181114.950/iedit-autoloads.el"
+;;;;;;  "../../../../../.emacs.d/elpa/iedit-20181114.950/iedit-lib.el"
+;;;;;;  "../../../../../.emacs.d/elpa/iedit-20181114.950/iedit-pkg.el"
+;;;;;;  "../../../../../.emacs.d/elpa/iedit-20181114.950/iedit-rect.el"
+;;;;;;  "../../../../../.emacs.d/elpa/iedit-20181114.950/iedit.el")
+;;;;;;  (0 0 0 0))
 
 ;;;***
 

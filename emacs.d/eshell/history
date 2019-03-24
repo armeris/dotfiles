@@ -1,3 +1,9 @@
 ls
 hgc -m "Updated"
 exit
+ls
+ls
+exit
+ls
+ssh armeris@homeserver
+ssh armeris@homeserver -p 2510

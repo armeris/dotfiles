@@ -25,7 +25,7 @@
 #
 # The top properties below are applied to every block, but can be overridden.
 # Each block command defaults to the script name to avoid boilerplate.
-command=/usr/lib/i3blocks/$BLOCK_NAME
+command=~/workspace/i3blocks-contrib/$BLOCK_NAME/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
@@ -36,7 +36,7 @@ markup=none
 # See the script for details.
 [volume]
 #label=VOL
-label=
+label= 
 instance=Master
 #instance=PCM
 interval=once
@@ -46,8 +46,8 @@ signal=10
 #
 # The type defaults to "mem" if the instance is not specified.
 [memory]
-label=MEM
-separator=false
+label=MEM 
+separator=true
 interval=30
 
 # Disk usage
@@ -56,12 +56,13 @@ interval=30
 # The script may be called with a optional argument to set the alert
 # (defaults to 10 for 10%).
 [disk]
-label= home
+separator=true
+label= home 
 #instance=/mnt/data
 interval=30
 
 [disk]
-label= root
+label= root 
 instance=/
 interval=30
 
@@ -98,7 +99,7 @@ markup=pango
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
 [cpu_usage]
-label=CPU
+label=CPU 
 interval=10
 #min_width=CPU: 100.00%
 separator=true

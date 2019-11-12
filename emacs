@@ -32,7 +32,7 @@
     ("f41ecd2c34a9347aeec0a187a87f9668fa8efb843b2606b6d5d92a653abe2439" default)))
  '(package-selected-packages
    (quote
-    (exec-path-from-shell go-eldoc go-rename dockerfile-mode company-quickhelp company-ghci company-ghc org-tree-slide docker-compose-mode go-mode exwm go-autocomplete ruby-tools haskell-mode groovy-mode klere-theme))))
+    (neotree rjsx-mode web-mode markdown-mode rhtml-mode rspec-mode ruby-test-mode alchemist exec-path-from-shell go-eldoc go-rename dockerfile-mode company-quickhelp company-ghci company-ghc org-tree-slide docker-compose-mode go-mode exwm go-autocomplete ruby-tools haskell-mode groovy-mode klere-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -77,7 +77,7 @@
 ;; Show time
 (display-time-mode 1)
 
-(ido-mode 1)
+(ido-mode 0)
 (setq ido-everywhere t)
 (setq ido-enable-flex-matching t)
 (setq ido-use-filename-at-point 'guess)
@@ -113,6 +113,8 @@
 ;; GO
 ;;Load Go-specific language syntax
 ;;For gocode use https://github.com/mdempsky/gocode
+
+(setenv "GOPATH" (concat (getenv "HOME") "/workspace/go"))
 
 ;;Custom Compile Command
 (defun go-mode-setup ()
@@ -158,3 +160,22 @@
 
 ;;Compilation autoscroll
 (setq compilation-scroll-output t)
+
+;; File tree
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+
+;; HTML
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+
+;; JS
+(require 'rjsx-mode)
+(add-to-list 'auto-mode-alist '("components\\/.*\\.js\\'" . rjsx-mode))

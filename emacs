@@ -32,7 +32,7 @@
     ("f41ecd2c34a9347aeec0a187a87f9668fa8efb843b2606b6d5d92a653abe2439" default)))
  '(package-selected-packages
    (quote
-    (neotree rjsx-mode web-mode markdown-mode rhtml-mode rspec-mode ruby-test-mode alchemist exec-path-from-shell go-eldoc go-rename dockerfile-mode company-quickhelp company-ghci company-ghc org-tree-slide docker-compose-mode go-mode exwm go-autocomplete ruby-tools haskell-mode groovy-mode klere-theme))))
+    (yasnippet projectile use-package dap-mode lsp-ui company-lsp neotree rjsx-mode web-mode markdown-mode rhtml-mode rspec-mode ruby-test-mode alchemist exec-path-from-shell go-eldoc go-rename dockerfile-mode company-quickhelp company-ghci company-ghc org-tree-slide docker-compose-mode go-mode exwm go-autocomplete ruby-tools haskell-mode groovy-mode klere-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -178,4 +178,5 @@
 
 ;; JS
 (require 'rjsx-mode)
-(add-to-list 'auto-mode-alist '("components\\/.*\\.js\\'" . rjsx-mode))
+(add-to-list 'auto-mode-alist '("\\.*\\.js\\'" . rjsx-mode))
+

@@ -36,7 +36,7 @@ markup=none
 # See the script for details.
 [volume]
 #label=VOL
-label= 
+label=
 instance=Master
 #instance=PCM
 interval=once
@@ -46,7 +46,7 @@ signal=10
 #
 # The type defaults to "mem" if the instance is not specified.
 [memory]
-label=MEM 
+label=MEM
 separator=true
 interval=30
 
@@ -57,12 +57,12 @@ interval=30
 # (defaults to 10 for 10%).
 [disk]
 separator=true
-label= home 
+label= home
 #instance=/mnt/data
 interval=30
 
 [disk]
-label= root 
+label= root
 instance=/
 interval=30
 
@@ -94,12 +94,22 @@ markup=pango
 #instance=eth0
 #interval=5
 
+[governor]
+command=cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+interval=5
+markup=pango
+
+[cpufreq]
+command=~/.i3blocks/cpufreq.sh
+markup=pango
+interval=5
+
 # CPU usage
 #
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
 [cpu_usage]
-label=CPU 
+label=CPU
 interval=10
 #min_width=CPU: 100.00%
 separator=true
@@ -132,7 +142,7 @@ interval=30
 [calendar]
 command=~/.i3blocks/calendar
 label=
-interval=5
+interval=1
 
 # Date Time
 #[time]

@@ -228,6 +228,9 @@ bindsym $mod+F8 exec mocp --next
 # App shortcuts
 bindsym $mod+w exec "/usr/bin/firefox"
 bindsym $mod+n exec "/usr/bin/nautilus"
+bindsym $mod+e exec "/usr/bin/emacsclient -nc"
+bindsym XF86Calculator exec gnome-calculator
+bindsym XF86Display exec ~/.bin/monitorToggle.sh
 
 # Redirect sound to headphones
 bindsym $mod+m exec "/usr/local/bin/switch-audio-port"
@@ -243,6 +246,7 @@ exec --no-startup-id "variety"
 exec --no-startup-id "blueman-applet"
 exec --no-startup-id "xrandr --dpi 120"
 exec --no-startup-id "dropbox"
+exec --no-startup-id "~/.bin/monitor_right.sh"
 
 # Screen brightness
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10

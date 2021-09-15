@@ -178,6 +178,7 @@ bar {
 	position top
     tray_output DP1
     tray_padding 0
+    font pango:Hack 10
 	# status_command i3blocks -c ~/.config/i3blocks/config
 
 	# colors {
@@ -188,7 +189,7 @@ bar {
 	# 	inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
 	# 	urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
 	# }
-    status_command bumblebee-status -t nord-powerline -m sensors memory disk battery pasink indicator datetime -p datetime.format="%d/%m/%Y %H:%M" disk.path=/home
+    status_command bumblebee-status -t nord-powerline -m load uptime sensors memory disk battery pasink indicator datetime system -p datetime.format="%d/%m/%Y %H:%M" disk.path=/home
 }
 
 # floating windows
@@ -245,10 +246,11 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id "compton -cC"
 exec --no-startup-id nm-applet
 exec --no-startup-id "variety"
-exec --no-startup-id "blueman-applet"
+#exec --no-startup-id "blueman-applet"
 exec --no-startup-id "xrandr --dpi 120"
 exec --no-startup-id "dropbox"
-exec --no-startup-id "~/.bin/monitor_right.sh"
+exec --no-startup-id "autorandr --change desktop"
+exec --no-startup-id "solaar -w hide -b symbolic"
 
 # Screen brightness
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
@@ -259,6 +261,9 @@ bindsym Print exec xfce4-screenshooter
 
 # Powermenu
 bindsym $mod+p exec --no-startup-id ~/.config/rofi/scripts/powermenu.sh
+
+# rofi randr
+bindsym $mod+Shift+p exec --no-startup-id rofi-autorandr
 
 # Scratchpad
 bindsym $mod+Shift+minus move scratchpad
